@@ -1,0 +1,50 @@
+﻿@model DESAFIO_INDIGO.Models.CepModel
+@{
+    ViewBag.Title = "Busca";
+}
+
+<script src="~/Scripts/BuscarRobo.js"></script>
+<script src="~/Scripts/Mascaras.js"></script>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<body>
+
+    <h2>Método utilizando Robo CEP</h2>
+
+    <br />
+    <form method="get" action="." onload="mCEP">
+
+        <label>
+            Cep:
+        </label>
+        <label id="cep" onload="mCEP">
+            @Model.cep
+        </label><br />
+
+        <label>
+            Rua:
+        </label>
+        <label>
+            @Model.logradouro
+        </label><br />
+
+        <label>
+            Bairro:
+        </label>
+        <label>
+            @Model.bairro
+        </label><br />
+
+        <label>
+            Estado:
+        </label>
+        <label>
+            @Model.estado
+        </label><br />
+        <br />
+        <a href="/Busca/Buscar">
+            <input type="button" value="NOVA BUSCA" />
+        </a>
+    </form>
+</body>

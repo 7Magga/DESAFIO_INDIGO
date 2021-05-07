@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "Busca CEP";
+}
+
+<script src="~/Scripts/BuscarRobo.js"></script>
+<script src="~/Scripts/Mascaras.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+<body>
+
+    <h2>Método utilizando Robo CEP</h2>
+
+    <br />
+    <form method="get" action=".">
+
+        <label>
+            Cep:
+            <input name="cep" type="text" id="cep" value="" size="10" maxlength="8"
+                   onkeypress="mCEP"/>
+
+            <button type="button" onclick="abrirCorreios(cep.value)">Pesquisar</button>
+        </label><br />
+
+        <br />
+        <br />
+        <br />
+        <br />
+
+
+    </form>
+</body>
